@@ -12,7 +12,7 @@
 }
 
 *::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
   background-color: rgb(36, 33, 33);
 }
 
