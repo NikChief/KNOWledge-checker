@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import './Quiz.css';
+import Question from '../Question/Question';
 
 
 function Quiz({ name, score, questions, setQuestions, setScore }) {
@@ -13,7 +14,7 @@ function Quiz({ name, score, questions, setQuestions, setScore }) {
       questions[currentQuestion]?.correct_answer,
       ...questions[currentQuestion]?.incorrect_answers,
     ]))
-  }, [questions])
+  }, [questions, currentQuestion])
   console.log(options)
   
   const handleShuffle = (opts) => {
@@ -33,6 +34,15 @@ function Quiz({ name, score, questions, setQuestions, setScore }) {
                 Score : {score}
               </span>
             </div>
+            <Question 
+              currentQuestion={currentQuestion}
+              setCurrentQuestion={setCurrentQuestion}
+              questions={questions}
+              options={options}
+              correct={questions[currentQuestion]?.correct_answer}
+              score={score}
+              setScore={setScore}
+            />
           </>
         ) : (
           <CircularProgress style={{

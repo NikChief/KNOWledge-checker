@@ -36,7 +36,10 @@ function App() {
               setScore={setScore}
               setQuestions={setQuestions}
             />} />
-            <Route path='/result' exact element={<Result />} />
+            <Route path='/result' exact element={<Result 
+            score={score}
+            name={name}
+            />} />
           </Routes>
         </div>
         <Footer />
