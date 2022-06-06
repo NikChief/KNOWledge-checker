@@ -64,7 +64,7 @@ function Question({
               className={`singleOption ${selected && handleSelect(item)}`}
               key={item}
               disabled={selected}
-            >{item}
+            >{he.decode(item)}
             </button>))
           }
         </div>
@@ -72,17 +72,25 @@ function Question({
           <Button
             variant="contained"
             color="secondary"
-            size="large"
-            style={{ width: '45%' }}
+            size='large'
+            style={{ width: '46%', lineHeight: 'normal' }}
             href="/"
             onClick={handleQuit}
+            sx={{
+              padding: '15px',
+              fontSize: { xs: "2.2vw", md: '1.5vw'}
+            }}
             >Quit</Button>
           <Button
             variant="contained"
+            size='large'
             color="primary"
-            size="large"
-            style={{ width: '45%' }}
+            style={{ width: '46%', lineHeight: 'normal' }}
             onClick={handleNext}
+            sx={{
+              padding: '15px',
+              fontSize: { xs: "2.2vw", md: '1.5vw' }
+            }}
           >Next</Button>
         </div>
       </div>

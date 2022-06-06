@@ -42,7 +42,7 @@ function App() {
             />} />
           </Routes>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </BrowserRouter>
   );

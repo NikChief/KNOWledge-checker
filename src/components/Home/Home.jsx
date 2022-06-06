@@ -54,7 +54,7 @@ function Home({ name, setName, fetchQuestions}) {
         </div>
 
       </div>
-      <img src="/rounded-in-photoretrica.png" alt="quiz" className='banner' />
+      <img src="/rounded-in-photoretrica.png" alt="quiz" className='banner' style={{opacity: '0.70'}}/>
     </div>
   );
 }

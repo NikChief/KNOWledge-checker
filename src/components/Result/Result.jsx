@@ -19,7 +19,7 @@ function Result({name, score}) {
         variant="contained"
         color="secondary"
         size="large"
-        style={{ alignSelf: "center", marginTop: 20 }}
+        style={{ alignSelf: "center", marginTop: 20, padding: "20px 50px" }}
         href="/"
       >
         Homepage
